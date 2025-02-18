@@ -2,7 +2,7 @@ document.getElementById('logoutIcon').addEventListener('click', function (event)
     event.preventDefault();
     const confirmation = confirm("Are you sure you want to logout?");
     if (confirmation) {
-        window.location.href = "SignIn.html";
+        window.location.href = "index.html";
         // Perform actual logout action here, e.g., redirect or clear session
         alert("Logging out...");
     }

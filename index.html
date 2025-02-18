@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attendance Form</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <!-- For signin page -->
+        <div class="container">
+            <form id="loginForm" class="sign-in-form">
+                <img src="image/loginicon.jpg" alt>
+                <h2>Sign In</h2>
+                <div class="input-box">
+                    <label for="zname">User Name</label>
+                    <input type="text" id="text" name="text"
+                        placeholder="Enter User Name"
+                        required>
+                </div>
+                <!-- <div class="input-box">
+                    <label for="password"> Password</label>
+                    <input type="password" id="password" name="password"
+                        placeholder="Enter Password"
+                        required>
+                </div> -->
+                <div class="input-box" style="position: relative;">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" 
+                           placeholder="Enter Password" required 
+                           style="padding-right: 40px;">
+                    <span id="togglePassword" 
+                          style="position: absolute; right: 10px; top: 65%; transform: translateY(-50%); cursor: pointer;">
+                        👁️
+                    </span>
+                </div>
+                <!-- <a href="#" id="forgotPasswordLink">Forgot Password?</a> -->
+                <a href="#" id="forgotPasswordLink"></a>
+
+                <button type="submit" id="submit">
+                    Sign In</button>
+            </form>
+            <!-- end of form -->
+
+            <!-- Registration Link -->
+            <!-- <p>Don't have an account?<a href="#"
+                    id="registerLink">Register</a></p>
+            <p id="text_show"></p> -->
+        </div>
+        <!-- end of container -->
+
+        <!-- Forgot Password Popup -->
+        <div id="forgotPasswordPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span>
+                <!-- Close button -->
+                <h2>Forgot Password</h2>
+                <form id="forgotPasswordForm">
+                    <label for="email">Email</label>
+                    <input type="email" id="forgotEmail" name="email"
+                        placeholder="Enter your email" required>
+
+                    <button type="button" id="sendOtp">Send OTP</button>
+
+                    <label for="otp">Enter OTP</label>
+                    <input type="text" id="otp" name="otp"
+                        placeholder="Enter OTP" required>
+
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" name="password"
+                        placeholder="Enter new password" required>
+
+                    <!-- <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm new password" required> -->
+
+                    <button type="submit">Reset Password</button>
+                </form>
+                <!-- end of form -->
+            </div>
+            <!-- end of popup-content -->
+        </div>
+        <!-- end of popup -->
+
+        <!-- Registration Popup -->
+        <div id="registrationPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="closePopup2">&times;</span>
+                <!-- Close button -->
+                <h2>Registration</h2>
+                <form id="registrationForm">
+                    <label for="regEmail">User Name</label>
+                    <input type="text" id="regEmail" name="email"
+                        placeholder="Enter user name" required>
+                    <div id="usernameError" class="error-message"></div>
+
+                    <label for="regName">Full Name</label>
+                    <input type="text" id="regName" name="name"
+                        placeholder="Enter full name" required>
+                    <div id="fullnameError" class="error-message"></div>
+
+                    <!-- <label for="regEmail">User Name</label>
+                    <input type="text" id="regEmail" name="email"
+                        placeholder="Enter user name" required>
+                    <div id="usernameError" class="error-message"></div> -->
+
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" name="password"
+                        placeholder="Enter password" required>
+                    <div id="passwordError" class="error-message"></div>
+
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword"
+                        name="confirmPassword" placeholder="Confirm password"
+                        required>
+                    <div id="confirmPasswordError" class="error-message"></div>
+
+                    <button type="submit">Register</button>
+                </form>
+                <div id="successMessage" class="success-message"></div>
+            </div>
+            <!-- end of popup-content -->
+        </div>
+        <!-- end of registrationpopup -->
+
+        <script src="index.js"></script>
+        <!-- <script src="SideBar.js"></script> -->
+    </body>
+</html>

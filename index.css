@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    background-image: url('image/bg\ imd\ 1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 30%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #153875a4;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgb(0, 123, 255);
+}
+
+.container.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    box-shadow: 0 0 20px #0056b3;
+}
+
+.sign-in-form {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-in-form h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: orange;
+}
+
+.sign-in-form img {
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    margin-bottom: 5px;
+    display: block;
+    color: aliceblue;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(49, 49, 149);
+    border-radius: 10px;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button a:hover {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.sign-in-form a {
+    margin-bottom: 10px;
+    color: aliceblue;
+    text-align: right;
+}
+
+.sign-in-form a:hover {
+    text-decoration: underline;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+p a {
+    color: rgb(247, 163, 6);
+    cursor: pointer;
+}
+
+#text_show {
+    color: rgb(203, 22, 22);
+}
+
+/* Popup Styles for Forgot password and Register */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: orange;
+}
+
+.popup-content label {
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+    color: black;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.popup-content input {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 1px solid rgb(49, 49, 149);
+    border-radius: 10px;
+}
+
+.popup-content button {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+#successMessage {
+    color: green;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .container {
+        width: 60%;
+        padding: 20px;
+    }
+
+    button {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* For mobile phones (landscape and portrait) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* For very small screens (less than 360px) */
+@media (max-width: 360px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+}
