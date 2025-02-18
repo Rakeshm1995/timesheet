@@ -1,0 +1,508 @@
+/* CSS Reset */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: emoji;
+}
+
+.content{
+    margin-left: 200px; /* Matches the side menu width */
+}
+
+/* For download section */
+.head-section {
+    position: relative;
+}
+
+.download-icon {
+    font-size: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-radius: 9px;
+    z-index: 1;
+}
+
+.download-btn {
+    background-color: #19b51e;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.9s;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.download-btn:hover {
+    background-color: #010e02;
+}
+
+.download-btn:focus {
+    outline: none;
+}
+
+/* Time-Sheet Entry Details */
+.container {
+    /* margin: 0 auto; */
+    height: 30vh;
+    max-width: 800px;
+    width: 100%;
+    background: #153875;
+    color: aliceblue;
+    /* padding: 25px 30px; */
+    border-radius: 8px;
+    /* border: 1px solid rgb(115, 74, 74); */
+    margin-top: 20px;
+    /* justify-content: center; */
+    box-shadow: 0 0 20px rgb(25, 63, 175);
+}
+
+.container .title {
+    padding: 5px;
+    font-size: 25px;
+    background-color: orange;
+    color: rgb(23, 22, 22);
+    font-family: emoji;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.container .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0px 0px 0px;
+}
+
+.user-details .input-box {
+    margin-bottom: 15px;
+    /* width: calc(100%/2-20px); */
+}
+
+.user-details .input-box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.user-details .input-box input,
+select {
+    height: 27px;
+    width: 160px;
+    display: block;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.user-details .input-supervisor {
+    margin-left: 110px;
+    margin-right: 110px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.user-details .input-supervisor label {
+    /* display: block; */
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.user-details .input-supervisor input {
+    height: 27px;
+    width: 220px;
+    /* display: block; */
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.select-zone {
+    color: #7b7b7b;
+}
+
+.select-shift{
+    color: #7b7b7b;
+}
+
+.select-zone:hover {
+    color: #010e02;
+}
+
+.select-shift:hover {
+    color: #010e02;
+}
+
+::placeholder {
+    font-size: 1em;
+}
+
+.user-details .input-box input:focus {
+    border-color: #9b59b6;
+}
+
+.user-details .input-box select:focus {
+    border-color: #9b59b6;
+}
+
+/* For Button */
+.form-button button {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid rgb(208, 128, 7);
+    font-weight: bold;
+    color: rgb(5, 89, 192);
+    background: white;
+    cursor: pointer;
+    /* outline: none; */
+}
+
+.form-button button:hover {
+    color: white;
+    background-color: rgb(9, 56, 167);
+    font-weight: bold;
+}
+
+/* Time-Sheet Table Details */
+
+.user-details-tbl {
+    max-height: 350px;
+    /* Set the desired height for scrolling */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+
+}
+
+table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin-top: 20px;
+    box-shadow: 0 0 10px #102fdc;
+}
+
+table,
+td,
+th,
+tr {
+    /* padding: 4px; */
+    border: 2px solid rgb(21, 92, 137);
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+}
+
+thead {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #153875;
+}
+
+.shift-dropdown {
+    width: 100%;
+    /* Ensures the dropdown fits the cell width */
+    padding: 5px;
+    /* Adds padding for better clickability */
+    font-size: 14px;
+    /* Adjusts font size */
+    color: #333;
+    /* Text color */
+    background-color: #f9f9f9;
+    /* Light background for dropdown */
+    border: 1px solid #ccc;
+    /* Subtle border */
+    border-radius: 4px;
+    /* Rounded corners */
+    appearance: none;
+    /* Removes default browser styles */
+    cursor: pointer;
+    /* Pointer cursor for clarity */
+}
+
+/* Add hover effect */
+.shift-dropdown:hover {
+    border-color: #888;
+    /* Darker border on hover */
+    background-color: #e6e6e6;
+    /* Slightly darker background on hover */
+}
+
+/* Style for dropdown when focused */
+.shift-dropdown:focus {
+    outline: none;
+    /* Removes default outline */
+    border-color: #007bff;
+    /* Blue border for focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Adds focus glow */
+}
+
+.no-border input[type="text"] {
+    border: 0;
+    width: 30px;
+}
+
+.fas {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #007bff;
+    /* Edit icon color */
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    /* Center the pagination controls */
+    align-items: center;
+    margin-top: 10px;
+    /* Add some space above the pagination */
+    font-family: Arial, sans-serif;
+    /* Set a clean font */
+}
+
+#pagination button {
+    background-color: #007bff;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* Remove default button border */
+    padding: 5px 10px;
+    /* Padding for buttons */
+    margin: 0 10px;
+    /* Space between buttons */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+    font-size: 12px;
+    /* Font size for buttons */
+}
+
+#pagination button:hover {
+    background-color: #0056b3;
+    /* Darker background on hover */
+}
+
+#pagination button:disabled {
+    background-color: #cccccc;
+    /* Gray background for disabled state */
+    cursor: not-allowed;
+    /* Change cursor for disabled button */
+}
+
+#pagination span#page-info {
+    font-size: 16px;
+    /* Set font size for the page info */
+    margin: 0 10px;
+    /* Space between the buttons and page info */
+    color: #333;
+    /* Text color */
+    font-weight: bold;
+    /* Bold the text */
+}
+
+.hidden-column {
+    display: none;
+}
+
+input[type="date"]:disabled {
+    border: none; /* Removes the border */
+    background: transparent; /* Makes the background transparent */
+    color: inherit; /* Ensures the text color matches the parent */
+    outline: none; /* Removes any focus outline */
+    pointer-events: none; /* Ensures the input cannot be interacted with */
+}
+
+
+
+
+/*Responsive media queries */
+@media(max-width:940px) {
+    .container {
+        margin-top: 15px;
+    }
+
+    .container .user-details {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .user-details .input-box input,
+    select {
+        height: 25px;
+        width: 130px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .user-details .input-supervisor input {
+        height: 25px;
+        width: 130px;
+        /* display: block; */
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 13px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+
+    th {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:783px) {
+    .container {
+        margin-top: 10px;
+    }
+
+    .container .title {
+        font-size: 20px;
+    }
+
+    .container .user-details {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .user-details .input-box input,
+    select {
+        height: 25px;
+        width: 100px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    ::placeholder {
+        font-size: 8px;
+    }
+
+    th {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:690px) {
+    .container {
+        margin-top: 10px;
+    }
+
+    .container .title {
+        font-size: 20px;
+    }
+
+    .container .user-details {
+        margin: 15px 0px 0px 0px;
+    }
+
+    .user-details .input-box label {
+        font-size: 10px;
+    }
+
+    .user-details .input-box input,
+    select {
+        height: 25px;
+        width: 80px;
+        padding-left: 8px;
+        font-size: 10px;
+    }
+
+    ::placeholder {
+        font-size: 7px;
+    }
+
+    .form-button button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    th {
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 600px) {
+    .container {
+        height: 55vh;
+        margin-top: 10px;
+    }
+
+    .container .title {
+        font-size: 20px;
+    }
+
+    .container .user-details {
+        flex-direction: column;
+        margin: 15px 0px 0px 0px;
+    }
+
+    .user-details .input-box label {
+        font-size: 13px;
+    }
+
+    .user-details .input-box input,
+    select {
+        height: 25px;
+        width: 120px;
+        padding-left: 8px;
+        font-size: 10px;
+    }
+
+    .form-button button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+
+    th {
+        font-size: 8px;
+    }
+
+    /* .container {
+        display: none;
+    }
+
+    .user-details-tbl {
+        display: none;
+    } */
+
+}

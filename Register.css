@@ -1,0 +1,144 @@
+/* General Styling */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* font-family: sans-serif; */
+    font-family: emoji;
+}
+
+.content {
+    margin-left: 200px;
+    /* Matches the side menu width */
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 30px;
+    height: 80vh;
+    max-width: 500px;
+    /* width: 100%; */
+    background: #153875;
+    color: aliceblue;
+    /* padding: 25px 30px; */
+    border-radius: 8px;
+    /* border: 1px solid rgb(115, 74, 74); */
+    /* margin-top: 20px; */
+    /* justify-content: center; */
+    box-shadow: 0 0 20px rgb(25, 63, 175);
+}
+
+.container .title {
+    background-color: orange;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    /* text-transform: uppercase; */
+    border-radius: 8px 8px 0px 0px;
+    font-weight: bold;
+    color: rgb(23, 22, 22);
+    font-size: 25px;
+    font-family: emoji;
+}
+
+.container .user-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0px 0px 0px;
+}
+
+.user-details .input-box {
+    margin-bottom: 15px;
+    /* width: calc(100%/2-20px); */
+}
+
+.user-details .input-box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.user-details .input-box input,
+select {
+    height: 30px;
+    width: 400px;
+    display: block;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically (optional) */
+}
+
+button {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid rgb(208, 128, 7);
+    font-weight: bold;
+    color: rgb(5, 89, 192);
+    background: white;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* margin-left: 38px; */
+    /* outline: none; */
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(9, 56, 167);
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-left: 35px;
+}
+
+.success-message {
+    color: #2fee09;
+    font-size: 14px;
+    display: block;
+    width: fit-content;
+    /* Adjusts width to fit the content */
+    margin: 0 auto;
+    /* Centers horizontally */
+}
+
+@media(max-width:645px) {
+    .container {
+        height: 72vh;
+    }
+
+    .container .title {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .user-details .input-box input, select {
+        height: 27px;
+        width: 180px;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attendance Sheet</title>
+        <link rel="stylesheet" href="Report.css">
+        <link rel="stylesheet" href="SideBar.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div class="side-menu">
+            <div class="menu-header">Attendance Sheet</div>
+            <div class="logo">
+                <img src="image/logo.png" alt>
+
+            </div>
+            <!-- end of logo -->
+            <ul>
+                <div class="side-nav">
+                    <li id="addEmployeeLink"> <img src="image/user.png"
+                            id="employeeIcon" alt><a
+                            href="AddEmployee.html" class="module">
+                            Employee Details</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="timeSheetLink"><img src="image/time sheet.png"
+                            alt><a
+                            href="TimesheetEntry.html" class="module">Time
+                            Sheet
+                            Entry</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="jobsetLink"><img src="image/jobset.png"
+                            alt><a
+                            href="JobSetDetails.html" class="module">Job Set
+                            Entry</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="timeSheetUpdateLink"><img src="image/timeupdt.png"
+                            id="timesheetIcon" alt><a
+                            href="TimesheetUpdate.html" class="module">Time
+                            Sheet
+                            Update</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="jobsetReportLink"><img src="image/jobsetreport.png"
+                            alt><a
+                            href="JSRReport.html"
+                            class="module">JSR Report</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="reportsLink"><img src="image/reports.png" alt><a
+                            href="Report.html"
+                            class="module">Report</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="RegisterLink"><img src="image/admin access.webp"
+                            alt><a
+                            href="Register.html"
+                            class="module">Admin Access</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="logoutIcon"><img src="image/logout.png" alt><a
+                            href="#"
+                            class="module">
+                            Logout
+                        </a></li>
+                </div>
+                <div class="side-nav">
+                    <h1>Powered by</h1>
+                    <p><a href="https://novazen.in">Visit novazen.in !</a></p>
+                </div>
+            </ul>
+            <!-- end of ul -->
+        </div>
+        <!-- end of side-menu -->
+
+        <div class="content" id="content">
+            <form action="#" id="ReportForm">
+                <div class="title">Report</div>
+                <div class="container">
+                    <div class="dt-range">
+                        <label for="from">From Date</label>
+                        <input type="date" id="fromDate">
+                    </div>
+
+                    <div class="dt-range">
+                        <label for="to">To Date</label>
+                        <input type="date" id="toDate">
+                    </div>
+                    <!-- <div class="container"> -->
+                    <div class="dt-range">
+                        <label for="super">Supervisor Name</label>
+                        <input type="text" id="supervisor"
+                            name="supervisor"
+                            placeholder="Enter Supervisor Name"
+                            maxlength="50" autocomplete="off">
+                        <span id="empsuper_error"
+                            class="supererrormessage"></span>
+                    </div>
+                </div>
+                <!-- end of container -->
+                <div class="btn">
+                    <button type="submit" id="submitBtn"
+                        onclick="fetchReportData()">OK</button>
+                    <button type="reset" onclick="resetForm()">RESET</button>
+                </div>
+                <!-- end of btn -->
+            </form>
+            <!-- end of form -->
+            <div class="form-download">
+                <div class="download-container">
+                    <button class="download-btn" id="downloadBtn">
+                        <i class="fa fa-download"></i> Download
+                    </button>
+                    <div class="dropdown" id="dropdownMenu">
+                        <!-- <a href="#" id="downloadPDF"
+                            onclick="downloadPDF()">PDF</a> -->
+                        <a href="#" id="downloadExcel"
+                            onclick="downloadExcel()">Excel</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end of form-download -->
+
+            <div class="report-dtls">
+                <table id="reportTable">
+                    <thead id="tableHeader">
+                        <tr>
+                            <th>SL</th>
+                            <th>Zone</th>
+                            <th>Employee Code</th>
+                            <th>Employee Name</th>
+                            <th>Category</th>
+                            <!-- Dates will be added dynamically here -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Report rows will be added dynamically here -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- end of report-dtls -->
+        </div>
+        <!-- end of content -->
+        <script src="Report.js"></script>
+        <script src="SideBar.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    </body>
+</html>

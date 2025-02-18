@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attendance Sheet</title>
+        <link rel="stylesheet" href="JobSetDetails.css">
+        <link rel="stylesheet" href="SideBar.css">
+    </head>
+    <body>
+        <div class="side-menu">
+            <div class="menu-header">Attendance Sheet</div>
+            <div class="logo">
+                <img src="image/logo.png" alt>
+            </div>
+            <!-- end of logo -->
+            <ul>
+                <div class="side-nav">
+                    <li id="addEmployeeLink"> <img src="image/user.png"
+                            id="employeeIcon" alt><a
+                            href="AddEmployee.html" class="module">
+                            Employee Details</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="timeSheetLink"><img src="image/time sheet.png"
+                            alt><a
+                            href="TimesheetEntry.html" class="module">Time
+                            Sheet
+                            Entry</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="jobsetLink"><img src="image/jobset.png"
+                            alt><a
+                            href="JobSetDetails.html" class="module">Job Set
+                            Entry</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="timeSheetUpdateLink"><img src="image/timeupdt.png"
+                            id="timesheetIcon" alt><a
+                            href="TimesheetUpdate.html" class="module">Time
+                            Sheet
+                            Update</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="jobsetReportLink"><img src="image/jobsetreport.png"
+                            alt><a
+                            href="JSRReport.html"
+                            class="module">JSR Report</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="reportsLink"><img src="image/reports.png" alt><a
+                            href="Report.html"
+                            class="module">Report</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="RegisterLink"><img src="image/admin access.webp"
+                            alt><a
+                            href="Register.html"
+                            class="module">Admin Access</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="logoutIcon"><img src="image/logout.png" alt><a
+                            href="#"
+                            class="module">
+                            Logout
+                        </a></li>
+                </div>
+                <div class="side-nav">
+                    <h1>Powered by</h1>
+                    <p><a href="https://novazen.in">Visit novazen.in !</a></p>
+                </div>
+            </ul>
+            <!-- end of ul -->
+        </div>
+        <!-- end of side-menu -->
+
+        <div class="content">
+            <div class="form-container">
+                <h2>Job Set Details</h2>
+                <form action="#" id="jobsetLink">
+                    <div class="form-dtls">
+                        <div class="form-group">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="zone">Zone:</label>
+                            <select class="select-zone" name="zone"
+                                id="zone">
+                                <option value disabled selected>Select
+                                    zone</option>
+                                <!-- <option value="all">All</option> -->
+                                <option value="zone-1">Zone-1</option>
+                                <option value="zone-2">Zone-2</option>
+                                <option value="zone-3">Zone-3</option>
+                                <!-- <option value="zone-4">Zone-4</option>
+                                <option value="zone-5">Zone-5</option>
+                                <option value="zone-6">Zone-6</option>
+                                <option value="zone-7">Zone-7</option>
+                                <option value="zone-8">Zone-8</option> -->
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="zone">Shift:</label>                           
+                            <select class="select-shift" name="shift"
+                                id="shift_select">
+                                <option value="" disabled selected>Select shift</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="Gen">Gen</option>                                    
+                            </select>                              
+                        </div>
+                        <div class="form-group">
+                            <label for="supervisor">Supervisor Name:</label>
+                            <input type="text" id="supervisor" name="supervisor"
+                                placeholder="Enter Supervisor Name"
+                                autocomplete="off">
+                            <span id="empsuper_error"
+                                class="supererrormessage"></span>
+                        </div>
+                    </div>
+                    <!-- end of form-dtls -->
+
+                    <!-- <h3>Job List</h3> -->
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <td>Low Stub</td>
+                                <td><input type="number" class="job-set-input"
+                                        id="low_stub"
+                                        data-job="Low Stub"></td>
+                            </tr>
+                            <tr>
+                                <td>Anode Covering</td>
+                                <td><input type="number" class="job-set-input"
+                                        id="anode_covering"
+                                        data-job="Anode Covering"></td>
+                            </tr>
+                            <tr>
+                                <td>Side Making</td>
+                                <td><input type="number" class="job-set-input"
+                                        id="side_making"
+                                        data-job="Side Making"></td>
+                            </tr>
+                            <tr>
+                                <td>Hole</td>
+                                <td><input type="number" class="job-set-input"
+                                        id="hole"
+                                        data-job="Hole"></td>
+                            </tr>
+                            <tr>
+                                <td>House Keeping</td>
+                                <td><input type="number" class="job-set-input"
+                                        id="house_keeping"
+                                        data-job="House Keeping"></td>
+                            </tr>
+                            <tr>
+                                <td>Supply</td>
+                                <td><input type="number" class="job-set-input"
+                                        id="supply"
+                                        data-job="Supply"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <!-- end of table-container -->
+                    <div class="buttons">
+                        <!-- <button type="button" id="save">SAVE</button> -->
+                        <button class="save" id="save">SAVE</button>
+                        <button type="reset" class="reset"
+                            onclick="resetForm()">RESET</button>
+                    </div>
+                    <!-- end of buttons -->
+                    <h3>Job Set Summary</h3>
+                    <div class="table-summary" id="jobset-sumry">
+                        <table>
+                            <tr>
+                                <th>Skilled</th>
+                                <th>Semi-Skilled</th>
+                                <th>Unskilled</th>
+                            </tr>
+                            <tr>
+                                <td id="skilled">0</td>
+                                <td id="semi_skilled">0</td>
+                                <td id="unskilled">0</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- end of table-summary -->
+                </form>
+                <!-- end of form -->
+            </div>
+            <!-- end of form-container -->
+        </div>
+        <!-- end of content -->
+        <script src="SideBar.js"></script>
+        <script src="JobSetDetails.js"></script>
+        <script>
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('date');
+
+            dateInput.value = today;
+            // dateInput.readOnly = true;  // Set the date field to readonly
+        </script>
+    </body>
+</html>

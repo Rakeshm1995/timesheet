@@ -1,0 +1,420 @@
+/* CSS Reset */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: emoji;
+}
+
+.content{
+    margin-left: 200px; /* Matches the side menu width */
+}
+
+/* For download section */
+.head-section {
+    position: relative;
+}
+
+.download-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    border-radius: 9px;
+    z-index: 1;
+}
+
+.download-btn {
+    background-color: #325483;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.9s;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.download-btn:hover {
+    background-color: #010e02;
+}
+
+.download-btn:focus {
+    outline: none;
+}
+
+/* Add New Employee Details */
+.container {
+    height: 52vh;
+    max-width: 800px;
+    width: 100%;
+    color: white;
+    background: #153875;
+    /* padding: 25px 30px; */
+    border-radius: 8px;
+    /* border: 1px solid rgb(144, 20, 20); */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgb(20, 163, 216);
+}
+
+.container .title {
+    background-color: orange;
+    color: rgb(23, 22, 22);
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: emoji;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.container .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0px 0px 0px;
+}
+
+.user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100%/2-20px);
+}
+
+.user-details .input-box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.user-details .input-box input,
+select {
+    height: 27px;
+    width: 220px;
+    display: block;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #2c5fbd;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.user-details .input-supervisor {
+    margin-left: 110px;
+    margin-right: 110px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.user-details .input-supervisor label {
+    /* display: block; */
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.user-details .input-supervisor input {
+    height: 27px;
+    width: 370px;
+    /* display: block; */
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.select-zone {
+    color: #7b7b7b;
+}
+
+.select-zone:hover {
+    color: #010e02;
+}
+
+/* for button */
+.form-button button {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid rgb(208, 128, 7);
+    font-weight: bold;
+    color: rgb(5, 89, 192);
+    background: white;
+    cursor: pointer;
+    /* outline: none; */
+}
+
+.form-button button:hover {
+    color: white;
+    background-color: rgb(9, 56, 167);
+}
+
+/* For search option of employee name or employee code */
+.search-container {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    text-align: right;
+    box-shadow: 0 0 10px rgb(5, 192, 99);
+
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #1199a8;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    /* font-style: italic; */
+
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: rgb(13, 170, 232);
+    font-size: 18px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.form-download {
+    display: grid;
+    justify-content: flex-end; 
+    margin: 5px 0; 
+}
+
+.download-container {
+    position: relative;
+}
+
+.download-btn {
+    background-color: #325483;
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown a {
+    color: black;
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.download-container:hover .dropdown {
+    display: block;
+}
+
+/* For table data */
+.user-details-tbl {
+    max-height: 200px; /* Set the desired height for scrolling */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: add border for styling */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2px;
+    box-shadow: 0 0 10px #102fdc;
+}
+
+table,
+tr,
+th,
+td {
+    /* padding: 4px; */
+    border: 2px solid rgb(21, 92, 137);
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+}
+
+th {
+    color: #f5f2f2;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #153875;
+}
+
+tr:hover {
+    background-color: #b69c9c;
+}
+
+tbody tr.highlighted {
+    background-color: #7e7b5f;
+}
+
+.fas {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #007bff;
+    /* Edit icon color */
+}
+
+.fa-trash {
+    color: #dc3545;
+    /* Delete icon color */
+}
+
+
+.user-guide {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(184, 100, 100);
+    font-weight: bold;
+}
+
+/*Responsive media queries */
+
+@media(max-width:940px) {
+    .container {
+        margin-top: 15px;
+    }
+
+    .container .user-details {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .user-details .input-box input,
+    select {
+        height: 27px;
+        width: 180px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    .user-details .input-supervisor input {
+        height: 27px;
+        width: 270px;
+        /* display: block; */
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 13px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+
+    th {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:780px) {
+    .container {
+        margin-top: 10px;
+        height: 65vh;
+    }
+
+    .container .title {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .container .user-details {
+        margin: 20px 0px 0px 0px;
+    }
+
+    .user-details .input-box input,
+    select {
+        height: 35px;
+        width: 180px;
+        padding-left: 10px;
+        font-size: 13px;
+    }
+
+    th {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:585px) {
+    .container {
+        height: 50vh;
+        padding: 10px 15px;
+        margin-top: 10px;
+    }
+
+    .container .title {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .container .user-details {
+        margin: 15px 0px 0px 0px;
+    }
+
+    .user-details .input-box label {
+        font-size: 13px;
+    }
+
+    .user-details .input-box input,
+    select {
+        height: 25px;
+        width: 150px;
+        padding-left: 8px;
+        font-size: 13px;
+    }
+
+    .form-button button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    th {
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 400px) {
+    .container {
+        display: none;
+    }
+
+    .user-details-tbl {
+        display: none;
+    }
+
+}
