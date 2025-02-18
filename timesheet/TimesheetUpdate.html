@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Attendance Sheet</title>
+        <link rel="stylesheet" href="TimesheetUpdate.css">
+        <link rel="stylesheet" href="SideBar.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+    <body>
+        <div class="side-menu">
+            <div class="menu-header">Attendance Sheet</div>
+            <div class="logo">
+                <img src="image/logo.png" alt>
+            </div>
+            <!-- end of logo -->
+            <ul>
+                <div class="side-nav">
+                    <li id="addEmployeeLink"> <img src="image/user.png"
+                            id="employeeIcon" alt><a
+                            href="AddEmployee.html" class="module">
+                            Employee Details</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="timeSheetLink"><img src="image/time sheet.png"
+                            alt><a
+                            href="TimesheetEntry.html" class="module">Time Sheet
+                            Entry</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="jobsetLink"><img src="image/jobset.png"
+                            alt><a
+                            href="JobSetDetails.html" class="module">Job Set
+                            Entry</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="timeSheetUpdateLink"><img src="image/timeupdt.png"
+                            id="timesheetIcon" alt><a
+                            href="TimesheetUpdate.html" class="module">Time
+                            Sheet
+                            Update</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="jobsetReportLink"><img src="image/jobsetreport.png"
+                            alt><a
+                            href="JSRReport.html"
+                            class="module">JSR Report</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="reportsLink"><img src="image/reports.png" alt><a
+                            href="Report.html"
+                            class="module">Report</a></li>
+                </div>
+                <div class="side-nav">
+                    <li id="RegisterLink"><img src="image/admin access.webp"
+                            alt><a href="Register.html"
+                            class="module">Admin Access</a></li>
+                </div>
+
+                <div class="side-nav">
+                    <li id="logoutIcon"><img src="image/logout.png" alt><a
+                            href="#"
+                            class="module">
+                            Logout
+                        </a></li>
+                </div>
+                <div class="side-nav">
+                    <h1>Powered by</h1>
+                    <p><a href="https://novazen.in">Visit novazen.in !</a></p>
+                </div>
+            </ul>
+            <!-- end of ul -->
+        </div>
+        <!-- end of side-menu -->
+
+        <div class="content" id="content">
+            <div class="head-section">
+                <div class="container">
+                    <div class="title">Time-Sheet Update</div>
+
+                    <form action="#" id="timeSheetLink">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <label for="date">From Date</label>
+                                <input type="date" id="fromdate" name="date">
+                            </div>
+
+                            <div class="input-box">
+                                <label for="date">To Date</label>
+                                <input type="date" id="todate" name="date">
+                            </div>
+
+                            <div class="input-box">
+                                <label for="employee_code">Employee Code</label>
+                                <input type="text" id="employee_code"
+                                    name="employee_code"
+                                    placeholder="Enter Employee Code"
+                                    maxlength="12"
+                                    autocomplete="off">
+                            </div>
+
+                            <div class="input-box">
+                                <label for="super">Supervisor Name</label>
+                                <input
+                                    type="text"
+                                    id="supervisor_name"
+                                    name="supervisor"
+                                    placeholder="Enter Supervisor Name"
+                                    maxlength="50"
+                                    autocomplete="off">
+                            </div>
+
+                            <div class="form-button">
+                                <button type="submit"
+                                    id="submit">SEARCH</button>
+                                <!-- <button type="savebtn"
+                                class="save-btn" id="save-btn">SAVE</button> -->
+                                <button type="reset" id="reset"
+                                    onclick="resetForm()">RESET</button>
+                            </div>
+                            <!-- end of form-button -->
+                        </div>
+                        <!-- end of user-details -->
+                    </form>
+                    <!-- end of form -->
+                </div>
+                <!-- end of container -->
+
+                <div class="user-details-tbl">
+                    <table id="tabledata">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Zone</th>
+                                <th>Employee Code</th>
+                                <th>Employee Name</th>
+                                <th>Department</th>
+                                <th>Category</th>
+                                <th>Supervisor Name</th>
+                                <th>Shift</th>
+                                <th>SK</th>
+                                <th>OT</th>
+                                <th>SSK</th>
+                                <th>OT</th>
+                                <th>USK</th>
+                                <th>OT</th>
+                                <th>Attendance</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="employeeTableBody">
+                            <!-- Rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+
+                    <div id="paginationControls">
+                        <button id="prev">Previous</button>
+                        <span id="page-info"></span>
+                        <button id="next">Next</button>
+                    </div>
+
+                </div>
+                <!-- end of user-details-tbl -->
+            </div>
+            <!-- end of head-section -->
+        </div>
+        <!-- end of content -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+        <script>
+            // const today = new Date().toISOString().split('T')[0];
+
+            // document.getElementById('date').value=today;
+        </script>
+        <script src="SideBar.js"></script>
+        <script src="TimesheetUpdate.js"></script>
+        <script>
+                // Retrieve isAdmin and userName from local storage
+                const isAdmin = localStorage.getItem('isAdmin') ? JSON.parse(localStorage.getItem('isAdmin')) : false;
+                const userName = localStorage.getItem('user') || '';
+            
+                // Get the Supervisor Name input field
+                const supervisorInput = document.getElementById('supervisor_name');
+            
+                // If user is not an admin, set the supervisor input field to userName and make it readonly
+                if (!isAdmin) {
+                    supervisorInput.value = userName;
+                    supervisorInput.readOnly = true;
+                    
+                }
+                console.log(userName);
+            </script>
+    </body>
+</html>

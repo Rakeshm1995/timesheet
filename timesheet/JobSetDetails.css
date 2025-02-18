@@ -1,0 +1,182 @@
+/* CSS Reset */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: emoji;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+} */
+.content {
+  margin-left: 200px;
+}
+
+.form-container {
+  margin-left: 200px;
+  /* Matches the side menu width */
+  max-width: 800px;
+  width: 100%;
+  margin: 25px auto;
+  background: #153875;
+  color: aliceblue;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 9px 18px rgba(6, 102, 206, 0.807);
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: aliceblue;
+  background-color: orange;
+  color: rgb(23, 22, 22);
+  font-weight: bold;
+  font-size: 25px;
+  font-family: emoji;
+  margin: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+
+.form-dtls {
+  padding: 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-dtls .form-group {
+  /* display: flex;
+    justify-content: space-between; */
+  margin-bottom: 15px;
+}
+
+label {
+  flex: 1;
+  font-weight: bold;
+}
+
+input,
+select {
+  flex: 2;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.table-container {
+  /* background: #fff; */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid #000; */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+table {
+  width: 400px;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 2px solid #000;
+  /* padding: 10px; */
+  font-weight: 600;
+  text-align: right;
+
+}
+
+.table-container td input[type="number"] {
+  text-align: left;
+}
+
+.table-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table-summary table th,
+table td {
+  background: #153875;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.table-summary table th {
+  background-color: #153875;
+}
+
+.buttons {
+  text-align: center;
+  margin: 8px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border: 1px solid rgb(208, 128, 7);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.save {
+ font-weight: bold;
+  border: 1px solid rgb(208, 128, 7);
+  border-radius: 5px;
+  color: rgb(5, 89, 192);
+  background: white;
+  cursor: pointer;
+
+}
+
+button.save:hover {
+  color: white;
+  background-color: rgb(9, 56, 167);
+}
+
+button.reset {
+  font-weight: bold;
+  border: 1px solid rgb(208, 128, 7);
+  border-radius: 5px;
+  color: rgb(5, 89, 192);
+  background: white;
+  cursor: pointer;
+
+}
+
+button.reset:hover {
+  color: white;
+  background-color: rgb(9, 56, 167);
+}
+
+.button {
+  color: white;
+  background-color: rgb(9, 56, 167);
+}
+
+.table-container input[type="number"] {
+  all: unset;
+  /* Resets all styles to default browser settings */
+  box-sizing: border-box;
+  /* Ensures consistent box model */
+}
+
+/* Remove spinner for modern browsers (Chrome, Edge, Opera) */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
