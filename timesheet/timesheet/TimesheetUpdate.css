@@ -1,0 +1,464 @@
+/* CSS Reset */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* font-family: sans-serif; */
+    font-family: emoji;
+}
+
+/* For download section */
+.head-section {
+    position: relative;
+}
+
+.download-icon {
+    font-size: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    /* background-color: white;
+    box-shadow: 0 2px 10px rgba(177, 14, 14, 0.1); */
+    border-radius: 9px;
+    z-index: 1;
+}
+
+.download-btn {
+    background-color: #19b51e;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.9s;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.download-btn:hover {
+    background-color: #010e02;
+}
+
+.download-btn:focus {
+    outline: none;
+}
+
+/* Time-Sheet Entry Details */
+
+.content{
+    margin-left: 200px; /* Matches the side menu width */
+}
+.container {
+    /* margin: 0 auto; */
+    height: 35vh;
+    max-width: 900px;
+    width: 100%;
+    background: #153875;
+    color: aliceblue;
+    /* padding: 25px 30px; */
+    border-radius: 8px;
+    /* border: 1px solid rgb(115, 74, 74); */
+    margin-top: 20px;
+    /* justify-content: center; */
+    box-shadow: 0 0 20px rgb(25, 63, 175);
+}
+
+.container .title {
+    padding: 5px;
+    font-size: 22px;
+    background-color: orange;
+    font-family: emoji;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(23, 22, 22);
+    border-radius: 8px 8px 0px 0px;
+}
+
+.container .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0px 0px 0px;
+}
+
+.user-details .input-box {
+    margin-bottom: 15px;
+    /* width: calc(100%/2-20px); */
+}
+
+.user-details .input-box label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.user-details .input-box input,
+select {
+    height: 25px;
+    width: 200px;
+    display: block;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.user-details .input-supervisor {
+    /* text-align: center; */
+    margin-left: 110px;
+    margin-right: 110px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.user-details .input-supervisor label {
+    /* display: block; */
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.user-details .input-supervisor input {
+    height: 20px;
+    width: 270px;
+    /* display: block; */
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.select-zone {
+    color: #7b7b7b;
+}
+
+.select-zone:hover {
+    color: #010e02;
+}
+
+::placeholder {
+    font-size: 12px;
+}
+
+.user-details .input-box input:focus {
+    border-color: #9b59b6;
+}
+
+.user-details .input-box select:focus {
+    border-color: #9b59b6;
+}
+
+/* For Button */
+.form-button button {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid rgb(208, 128, 7);
+    font-weight: bold;
+    color: rgb(5, 89, 192);
+    background: white;
+    cursor: pointer;
+    /* outline: none; */
+}
+
+.form-button button:hover {
+    color: white;
+    background-color: rgb(9, 56, 167);
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin-top: 20px;
+    box-shadow: 0 0 10px #102fdc;
+}
+
+table,
+td,
+th,
+tr {
+    /* padding: 4px; */
+    border: 2px solid rgb(21, 92, 137);
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+}
+
+thead {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #153875;
+}
+
+.no-border input[type="text"] {
+    border: 0;
+    width: 30px;
+}
+
+.edit-btn {
+    /* background-color: #007bff; */
+    color: #19b51e;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn i {
+    margin-right: 5px;
+    /* Space between icon and text */
+}
+
+.edit-btn:hover {
+    color: #007bff;
+}
+
+.save-btn {
+    color: rgb(32, 12, 182);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#paginationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+#paginationControls button {
+    background-color: #007bff;
+    /* Green background */
+    color: white;
+    /* White text */
+    border: none;
+    /* Remove borders */
+    padding: 5px 10px;
+    /* Padding around the button */
+    font-size: 12px;
+    /* Text size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    margin: 0 5px;
+    /* Space between buttons */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+#paginationControls button:hover {
+    background-color: #0056b3;
+    /* Darker green on hover */
+}
+
+#paginationControls button:disabled {
+    background-color: #ccc;
+    /* Gray background for disabled buttons */
+    color: #666;
+    /* Darker text color for disabled buttons */
+    cursor: not-allowed;
+    /* Not-allowed cursor for disabled buttons */
+}
+
+/* Style for the Shift column header */
+table th:nth-child(8) {
+    text-align: center;
+    /* Center align text */
+    font-weight: bold;
+
+}
+
+/* Style for the Shift column data cells */
+table td:nth-child(8) {
+    text-align: center;
+    /* Center align the content */
+    padding: 2px 5px;
+    background-color: #fff;
+
+
+}
+
+/* Style for the dropdown in the Shift column when editing */
+table td:nth-child(8) select {
+    width: 100%;
+    /* Make the dropdown fill the entire cell */
+    padding: 2px;
+    /* Add padding for better usability */
+    font-size: 14px;
+    /* Font size for readability */
+    color: #333;
+    /* background-color: #fff; */
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 4px;
+    /* Rounded corners */
+    outline: none;
+    /* Remove default focus outline */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    cursor: pointer;
+    /* Pointer cursor to indicate it's clickable */
+
+    -webkit-appearance: none;
+    /* Removes the icon in WebKit browsers (Chrome, Safari) */
+    -moz-appearance: none;
+    /* Removes the icon in Firefox */
+    appearance: none;
+    /* Standard way to remove icon */
+    background-image: none;
+    /* Remove the background image of the dropdown arrow */
+
+    background-color: #fff;
+    /* White background for a clean look */
+    background-position: right center;
+    /* Align the right side if you want a custom icon */
+    text-align: center;
+}
+
+/* Dropdown hover effect */
+table td:nth-child(8) select:hover {
+    border-color: #888;
+    /* Change border color on hover */
+}
+
+/* Dropdown focus effect */
+table td:nth-child(8) select:focus {
+    border-color: #555;
+    /* Darker border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Blue glow */
+}
+
+#page-info {
+    font-size: 14px;
+    /* Text size */
+    margin: 0 8px;
+    /* Space between page info and buttons */
+    color: #333;
+    /* Dark text color */
+}
+
+/* Responsive design */
+
+@media(max-width: 1045px) {
+    .container {
+        height: 30vh;
+    }
+
+    /* .container .user-details {
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .user-details .input-box input {
+        height: 20px;
+        width: 170px;
+    }
+
+    .form-button button {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    table,
+    td,
+    th,
+    tr {
+        font-size: 10px;
+    }
+
+    thead {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 920px) {
+    .container {
+        height: 30vh;
+    }
+
+    /* .container .user-details {
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .user-details .input-box input {
+        height: 20px;
+        width: 150px;
+    }
+
+    .form-button button {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    table,
+    td,
+    th,
+    tr {
+        font-size: 10px;
+    }
+
+    thead {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 842px) {
+    .container {
+        height: 60vh;
+    }
+
+    .container .user-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-details .input-box input {
+        height: 20px;
+        width: 150px;
+    }
+
+    .form-button button {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    table,
+    td,
+    th,
+    tr {
+        font-size: 10px;
+    }
+
+    thead {
+        font-size: 12px;
+    }
+}
