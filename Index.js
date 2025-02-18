@@ -379,7 +379,7 @@ function attachLogoutFunctionality() {
             if (confirmation) {
                 // Clear any session data
                 alert("Logging out...");
-                window.location.href = "SignIn.html"; // Redirect to sign-in page
+                window.location.href = "Index.html"; // Redirect to sign-in page
             }
         });
     } else {
